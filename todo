@@ -1,0 +1,52 @@
+nom du site : LSDC group
+garder compatibilité des liens pour ssl
+
+région select
+département select
+code postal input number
+
+catégories
+  promotion immo
+    maison
+    appartement
+    terrain
+    parking
+    autre
+  rachat high tech
+    informatique
+    console
+    jeux video
+    image et son
+    telephonie
+  négo automobile
+    voiture
+    moto
+    caravaning
+    utilitaire
+    nautisme
+    equipement
+
+nom input
+mail input mail
+tel input
+
+titre de l'annonce input
+description textarea
+prix input number
+import de fichier photo
+
+
+
+
+
+
+règle photo
+type                          jpeg png
+taille en mo                  5mo
+format (carré, YxZ)           non
+nommbre de photo a importer   3
+expiration                    immédiate
+taille du mail                a définir
+
+
+mail
