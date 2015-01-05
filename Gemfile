@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.4'
+gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -40,7 +40,7 @@ gem 'spring',        group: :development
 
 gem 'bundler'
 
-gem 'activeadmin', github: 'gregbell/active_admin'
+# gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise', github: 'plataformatec/devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
@@ -49,6 +49,10 @@ gem 'validates_formatting_of'
 gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'simple_form'
+gem 'dropzonejs-rails'
+gem 'carrierwave'
+gem "rmagick"
+gem 'font-awesome-rails'
 
 group :development do
   gem 'pry-rails'

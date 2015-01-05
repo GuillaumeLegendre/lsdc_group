@@ -12,15 +12,19 @@
 *
 *= require_tree .
 *= stub active_admin
+*= require font-awesome
+*= require dropzone/dropzone
 
 *= require_self
-*= require dropzone/dropzone
 */
+
 @import "bootstrap_configuration";
 
 @import "bootstrap-sprockets";
 
 @import "bootstrap";
+
+@import "font-awesome";
 
 //->Prelang (ui_framework:twitter_bootstrap)
 
@@ -37,4 +41,408 @@
 //->Prelang (user_login:devise)
 .form-user {
   max-width: 450px;
+}
+
+body{
+  font: normal normal 15px "Averia Sans Libre", Helvetica, sans-serif;
+}
+
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
+.gold-title {
+  background-color: #fdda86;
+  border: black 2px solid;
+  border-radius: 10px;
+}
+
+.gold-word{
+    color: #fdda86;
+    text-shadow: 0 0 3px rgba(0,0,0,0.85) ;
+    letter-spacing: 1px;
+}
+
+.font-size-18{
+  font-size: 18px;
+}
+
+header, footer{
+  min-width: 1070px !important;
+}
+
+.container#content{
+  width: 1036px !important;
+  padding-top:10px;
+  min-height: 413px;
+}
+
+.first-line{
+  padding-top: 5px;
+  background-color: white;
+  height:100px;
+  .label-logo{
+    font: normal normal bold 15px "Averia Sans Libre", Helvetica, sans-serif;
+  }
+}
+
+.second-line{
+  border: #fdda86 3px solid;
+  background-color: black;
+  color: white;
+  padding: 15px 0px;
+  .slogan{
+    font: normal normal bold 15px "Averia Sans Libre", Helvetica, sans-serif;
+  }
+}
+
+#logo-lsdc{
+  width: 130px;
+  height: 130px;
+  background: url(/assets/Logo-LSDC.png) no-repeat left 45px black;
+  background-size: 77%;
+  border: #fdda86 3px solid;
+  background-position: 12px 16px;
+  border-radius: 50%;
+}
+
+header #logo-lsdc{
+  margin-top: -18px;
+}
+
+#logo-auto{
+  width: 68px;
+  height: 68px;
+  background: url(/assets/Logo-auto.png) no-repeat left 45px black;
+  background-size: 108%;
+  border: #fdda86 3px solid;
+  background-position: -3px 18px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#logo-immo{
+  width: 68px;
+  height: 68px;
+  background: url(/assets/Logo-immo.png) no-repeat left 45px black;
+  background-size: 108%;
+  border: #fdda86 3px solid;
+  background-position: -4px 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#logo-hightech {
+  width: 68px;
+  height: 68px;
+  background: url(/assets/Logo-mobile.png) no-repeat left 45px black;
+  background-size: 59%;
+  border: #fdda86 3px solid;
+  background-position: 12px 3px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#logo-bulle-info {
+  width: 68px;
+  height: 68px;
+  background: url(/assets/logo-bulle-info.png) no-repeat left 45px black;
+  background-size: 94%;
+  border: #fdda86 3px solid;
+  background-position: 2px 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+footer{
+  background-color:white;
+  margin-top:50px;
+}
+
+.footer-1{
+  border-top: #fdda86 2px solid;
+  border-bottom: #fdda86 2px solid;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  .comment{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:30%;
+    span{
+      margin-left: auto;
+      margin-right: auto;
+      width: 70px;
+      display: block;
+      margin-bottom: 30px;
+    }
+    button{
+      width: 295px;
+      display: block;
+    }
+  }
+}
+
+.footer-2{
+  background-color: #efefee;
+  padding: 20px 0;
+  div{
+    text-align: center;
+  }
+  .right-border{
+    min-height:176px;
+    border-right: black 1px solid;
+  }
+}
+
+.footer-3{
+  border-top: #fdda86 2px solid;
+  border-bottom: #fdda86 2px solid;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-4{
+  padding: 20px 0;
+  .connected-icons {
+    margin: 0;
+    list-style-type: none;
+    display: inline-block;
+    list-style: none;
+    padding:0;
+    li {
+      display: inline-block;
+      padding: 17px 17px;
+      i{
+        ;
+      }
+      i:hover, i:active, i:focus{
+        color: rgb(255, 228, 148);
+      }
+
+      .fa-2-5x {
+        font-size: 2.5em;
+      }
+    }
+  }
+
+  .list-buttons{
+    button{
+      margin-bottom: 15px;
+      min-width: 187px;
+    }
+  }
+}
+
+.margin-top-20{
+  margin-top:20px;
+}
+
+.btn-vendeur {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  // height: 64px;
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  // padding: 10px 20px;
+  border: 3px solid;
+  -webkit-border-radius: 7px 7px 9px 9px;
+  border-radius: 7px 7px 9px 9px;
+  font: normal normal bold 15px "Averia Sans Libre", Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: normal;
+  background: rgb(253, 218, 134);
+  -webkit-box-shadow: 0 0 0 0 rgba(255,255,255,0.701961) inset, 0 0 5px 0 rgb(0,0,0) ;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.701961) inset, 0 0 5px 0 rgb(0,0,0) ;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.498039) ;
+  h2{
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.btn-vendeur:hover {
+  border: 3px solid rgb(253,218,134);
+  color: rgb(253,218,134);
+  background: rgba(0,0,0,1);
+  -webkit-box-shadow: 0 0 0 0 rgba(255,255,255,0.701961) inset, 0 0 5px 23px rgb(0,0,0) inset;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.701961) inset, 0 0 5px 23px rgb(0,0,0) inset;
+  -webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+
+}
+
+.btn-vendeur:active {
+  // height: 60px;
+  margin: 4px 0 0;
+  border: 1px solid rgb(253,218,134);
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 0 0 0 rgba(255,255,255,0.701961) inset, 0 0 0 0 rgb(177,106,2) ;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.701961) inset, 0 0 0 0 rgb(177,106,2) ;
+  -webkit-transition: all 30ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 30ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 30ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 30ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.btn-acheteur {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  // height: 64px;
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  // padding: 10px 20px;
+  border: 3px solid rgb(253,218,134);
+  -webkit-border-radius: 7px 7px 9px 9px;
+  border-radius: 7px 7px 9px 9px;
+  font: normal normal bold 15px "Averia Sans Libre", Helvetica, sans-serif;
+  color: rgb(253,218,134);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: normal;
+  background: rgba(0,0,0,1);
+  -webkit-box-shadow: 0 0 0 0 rgba(255,255,255,0.701961) inset, 0 0 5px 0 rgb(253,218,134) ;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.701961) inset, 0 0 5px 0 rgb(253,218,134) ;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.498039) ;
+  h2{
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.btn-acheteur:hover {
+  border: 3px solid;
+  color: rgba(0,0,0,1);
+  background: rgb(253,218,134);
+  -webkit-box-shadow: 0 0 0 0 rgba(255,255,255,0.701961) inset, 0 0 5px 0 rgba(0,0,0,1) inset;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.701961) inset, 0 0 5px 0 rgba(0,0,0,1) inset;
+  -webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+
+}
+
+.btn-acheteur:active {
+  // height: 60px;
+  margin: 4px 0 0;
+  border: 1px solid;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  background: rgb(253, 218, 134);
+  -webkit-box-shadow: 0 0 0 0 rgba(255,255,255,0.701961) inset, 0 0 0 0 rgb(177,106,2) ;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.701961) inset, 0 0 0 0 rgb(177,106,2) ;
+  -webkit-transition: all 30ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 30ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 30ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 30ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.btn-neutre {
+  // -webkit-box-sizing: content-box;
+  // -moz-box-sizing: content-box;
+  // box-sizing: content-box;
+  width: 192px;
+  height: 42px;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 4px solid rgb(253,218,134);
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  font: normal 15px "Averia Sans Libre", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  // text-indent: 10px;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: url("/assets/Logo-LSDC.png"), rgba(0,0,0,1);
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: 32px auto;
+  background-size: 32px auto;
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.btn-neutre:hover {
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-box-shadow: 0 0 15px 5px rgb(253,218,134) inset;
+  box-shadow: 0 0 15px 5px rgb(253,218,134) inset;
+}
+
+.btn-neutre:active {
+  border: 1px solid rgb(253,218,134);
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+}
+
+.btn-account{
+  width: 192px;
+  padding-right: 35px;
+}
+
+.btn-ambassador{
+  width: 310px;
+}
+
+.img-circle{
+  border: 2px solid #fdda86;
+  background-color: black;
 }

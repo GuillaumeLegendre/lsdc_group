@@ -1,4 +1,3 @@
-nom du site : LSDC group
 garder compatibilité des liens pour ssl
 
 région select
@@ -50,3 +49,15 @@ taille du mail                a définir
 
 
 mail
+
+
+
+
+
+Completed 500 Internal Server Error in 60276ms
+
+Net::ReadTimeout (Net::ReadTimeout):
+  app/controllers/home_controller.rb:11:in `submit_form'
+
+
+[2014-12-24 09:32:36] ERROR ThreadError: Attempt to unlock a mutex which is locked by another thread

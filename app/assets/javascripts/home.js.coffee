@@ -1,14 +1,11 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
-
 
 ready = undefined
 
 ready = ->
+
   getUrlParameter = (sParam) ->
     sPageURL = window.location.search.substring(1)
     sURLVariables = sPageURL.split("&")
@@ -20,9 +17,10 @@ ready = ->
       i++
     return
 
-  Dropzone.options.myAwesomeDropzone =
+  Dropzone.options.dropzone1 =
     paramName: "file" # The name that will be used to transfer the file
-    maxFilesize: 2 # MB
+    maxFilesize: 4 # MB
+    dictDefaultMessage: "TEST"
     accept: (file, done) ->
       done()
       return
@@ -35,7 +33,7 @@ ready = ->
     zoomMax: 1
     regionStyle:
       initial:
-        fill: "purple"
+        fill: "black"
 
     markerStyle:
       initial:
@@ -49,36 +47,474 @@ ready = ->
     markers: [
       {
         latLng: [
-          42.5
-          1.51
+          43.5333
+          5.43333
         ]
-        name: "Andorra"
-      }
+        name: "Aix-en-Provence"
+      },
       {
         latLng: [
-          43.73
-          7.41
+          49.9
+          2.3
         ]
-        name: "Monaco"
-      }
+        name: "Amiens"
+      },
       {
         latLng: [
-          45.76
-          4.84
+          47.4667
+          -0.55
+        ]
+        name: "Angers"
+      },
+      {
+        latLng: [
+          48.95
+          2.25
+        ]
+        name: "Argenteuil"
+      },
+      {
+        latLng: [
+          43.95
+          4.81667
+        ]
+        name: "Avignon"
+      },
+      {
+        latLng: [
+          47.25
+          6.03333
+        ]
+        name: "Besançon"
+      },
+      {
+        latLng: [
+          43.35
+          3.25
+        ]
+        name: "Beziérs"
+      },
+      {
+        latLng: [
+          44.8333
+          -0.566667
+        ]
+        name: "Bordeaux"
+      },
+      {
+        latLng: [
+          48.8333
+          2.25
+        ]
+        name: "Boulogne-Billancourt"
+      },
+      {
+        latLng: [
+          48.4
+          -4.48333
+        ]
+        name: "Brest"
+      },
+      {
+        latLng: [
+          46.85
+          1.95
+        ]
+        name: "Brives"
+      },
+      {
+        latLng: [
+          49.1833
+          -0.35
+        ]
+        name: "Caen"
+      },
+      {
+        latLng: [
+          45.7833
+          3.08333
+        ]
+        name: "Clermont-Ferrand"
+      },
+      {
+        latLng: [
+          48.8973
+          2.25222
+        ]
+        name: "Courbevoie"
+      },
+      {
+        latLng: [
+          48.7833
+          2.46667
+        ]
+        name: "Créteil"
+      },
+      {
+        latLng: [
+          47.3167
+          5.01667
+        ]
+        name: "Dijon"
+      },
+      {
+        latLng: [
+          51.05
+          2.36667
+        ]
+        name: "Dunkerque"
+      },
+      {
+        latLng: [
+          -61.0732
+          14.627
+        ]
+        name: "Fort-de-France"
+      },
+      {
+        latLng: [
+          45.1667
+          5.71667
+        ]
+        name: "Grenoble"
+      },
+      {
+        latLng: [
+          49.5
+          0.133333
+        ]
+        name: "Le Havre"
+      },
+      {
+        latLng: [
+          48
+          0.2
+        ]
+        name: "Le Mans"
+      },
+      {
+        latLng: [
+          50.6333
+          3.06667
+        ]
+        name: "Lille"
+      },
+      {
+        latLng: [
+          45.85
+          1.25
+        ]
+        name: "Limoges"
+      },
+      {
+        latLng: [
+          45.7589
+          4.84139
         ]
         name: "Lyon"
+      },
+      {
+        latLng: [
+          43.2967
+          5.37639
+        ]
+        name: "Marseille"
+      },
+      {
+        latLng: [
+          49.1333
+          6.16667
+        ]
+        name: "Metz"
+      },
+      {
+        latLng: [
+          43.6
+          3.88333
+        ]
+        name: "Montpellier"
+      },
+      {
+        latLng: [
+          50.4644
+          1.76417
+        ]
+        name: "Montreuil"
+      },
+      {
+        latLng: [
+          47.75
+          7.33333
+        ]
+        name: "Mulhouse"
+      },
+      {
+        latLng: [
+          48.6833
+          6.2
+        ]
+        name: "Nancy"
+      },
+      {
+        latLng: [
+          48.9
+          2.2
+        ]
+        name: "Nanterre"
+      },
+      {
+        latLng: [
+          47.2167
+          -1.55
+        ]
+        name: "Nantes"
+      },
+      {
+        latLng: [
+          43.1833
+          3
+        ]
+        name: "Narbonne"
+      },
+      {
+        latLng: [
+          43.7
+          7.25
+        ]
+        name: "Nice"
+      },
+      {
+        latLng: [
+          43.8333
+          4.35
+        ]
+        name: "Nîmes"
+      },
+      {
+        latLng: [
+          47.9167
+          1.9
+        ]
+        name: "Orléans"
+      },
+      {
+        latLng: [
+          42.6833
+          2.88333
+        ]
+        name: "Perpignan"
+      },
+      {
+        latLng: [
+          46.5833
+          0.333333
+        ]
+        name: "Poitiers"
+      },
+      {
+        latLng: [
+          49.25
+          4.03333
+        ]
+        name: "Reims"
+      },
+      {
+        latLng: [
+          48.1147
+          -1.6794
+        ]
+        name: "Rennes"
+      },
+      {
+        latLng: [
+          50.7
+          3.16667
+        ]
+        name: "Roubaix"
+      },
+      {
+        latLng: [
+          49.4333
+          1.08333
+        ]
+        name: "Rouen"
+      },
+      {
+        latLng: [
+          48.2333
+          3.26667
+        ]
+        name: "Saint-Denis"
+      },
+      {
+        latLng: [
+          45.4333
+          4.4
+        ]
+        name: "Saint-Étienne"
+      },
+      {
+        latLng: [
+          49.4333
+          2
+        ]
+        name: "Saint-Paul"
+      },
+      {
+        latLng: [
+          48.5833
+          7.75
+        ]
+        name: "Strasbourg"
+      },
+      {
+        latLng: [
+          43.1167
+          5.93333
+        ]
+        name: "Toulon"
+      },
+      {
+        latLng: [
+          43.6
+          1.43333
+        ]
+        name: "Toulouse"
+      },
+      {
+        latLng: [
+          50.7167
+          3.15
+        ]
+        name: "Tourcoing"
+      },
+      {
+        latLng: [
+          47.3833
+          0.683333
+        ]
+        name: "Tours"
+      },
+      {
+        latLng: [
+          45.7667
+          4.88333
+        ]
+        name: "Villeurbanne"
       }
     ]
+    series: {
+      regions: [{
+        values: {
+          'FR-V': '1',
+          'FR-J': '2',
+          'FR-A': '3',
+          'FR-B': '4',
+          'FR-R': '5',
+          'FR-O': '6'
+        },
+        scale: {
+          "1": "#fdda86",
+          "2": "#fdda86",
+          "3": "#fdda86",
+          "4": "#fdda86",
+          "5": "#fdda86",
+          "6": "#fdda86"
+        }
+      }]
+    }
+
+
+  # filter = "
+  #   <filter
+  #     id = 'dropShadow'
+  #     x='0'
+  #     y='0'
+  #     width='200%'
+  #     height='200%'>
+  #     <feOffset
+  #       in = 'SourceAlpha'
+  #       result = 'offOut'
+  #       dx = '5'
+  #       dy = '5'/>
+  #     <feGaussianBlur
+  #       in = 'offOut'
+  #       result = 'blurOut'
+  #       stdDeviation = '3'/>
+  #     <feBlend
+  #       in='SourceGraphic'
+  #       in2='blurOut'
+  #       mode='normal'/>
+  #   </filter>"
+
+  # # Create dummy svg with filter definition
+  # $("body").append "<svg id=\"dummy\" style=\"display:none\"><defs>" + filter + "</defs></svg>"
+  #
+  # # Append filter definition to vectormap created svg
+  # $("#world-map svg").append $("#dummy defs")
+  #
+  # # Remove dummy
+  # $("#dummy").remove()
+  #
+  # # Connect filter to the group of map objects
+  # $("#world-map svg g").attr "filter", "url(#dropShadow)"
 
   fill_select_departement = () ->
     region = $("#select_region option:selected").attr("data-region")
-    departements = $("#"+region+" > option").clone()
-    $("#select_departement").html(departements)
+    if region
+      departements = $("#"+region+" > option").clone()
+      o = new Option("", "");
+      $("#select_departement").empty()
+      $("#select_departement").append(o);
+      $("#select_departement").append(departements)
     return
 
   $("#select_region").change ->
     fill_select_departement()
     return
+
+  fill_select_sous_cat = () ->
+    cat = $("#select_cat option:selected").attr("data-cat")
+    if sous_cat
+      sous_cat = $("#"+cat+" > option").clone()
+      o = new Option("", "");
+      $("#select_sous_cat").empty()
+      $("#select_sous_cat").append(o);
+      $("#select_sous_cat").append(sous_cat)
+    return
+
+  $("#radio-pro, #radio-part").change ->
+    $("#form-professionnel, #form-status").removeClass("hide")
+    if ! $("#radio-pro").is(':checked')
+      $("#form-professionnel").addClass("hide")
+    return
+
+  $("#radio_vendeur, #radio_acheteur").change ->
+    $(".step0").removeClass("hide")
+    $("#acheteur, #vendeur").removeClass("hide")
+    if $("#radio_vendeur").is(':checked')
+      $("#acheteur").addClass("hide")
+    else
+      $("#vendeur").addClass("hide")
+    return
+
+  $("input.hook").each ->
+    elem = $(this)
+    elem.data "oldVal", elem.val()
+    elem.bind "propertychange change click keyup input paste", (event) ->
+      unless elem.data("oldVal") is elem.val()
+        elem.data "oldVal", elem.val()
+        hook = $(this).attr("data-hook")
+        $(".step"+ hook).removeClass("hide")
+        if(hook == "7")
+          $("#submit").attr("disabled", false)
+      return
+    return
+
+  $("select.hook").change ->
+    if $(this).attr("id") == "select_cat"
+      fill_select_sous_cat()
+    $(".step"+ $(this).attr("data-hook")).removeClass("hide")
 
   region = getUrlParameter('region')
   if region
@@ -86,9 +522,54 @@ ready = ->
   fill_select_departement()
 
   cat = getUrlParameter('cat')
+  if cat
+    $("#select_cat").val $("#select_cat > option[data-cat=" + cat + "]").val()
+  fill_select_sous_cat()
 
+  $(".dropzone").dropzone({ url: "/file-upload" });
+  # $("#dropzone1, #dropzone2, #dropzone3").addClass("dropzone");
 
   return
 
 $(document).ready ready
 $(document).on "page:load", ready
+
+
+
+### facebook ###
+fb_root = null
+fb_events_bound = false
+
+$ ->
+  loadFacebookSDK()
+  bindFacebookEvents() unless fb_events_bound
+
+bindFacebookEvents = ->
+  $(document)
+    .on('page:fetch', saveFacebookRoot)
+    .on('page:change', restoreFacebookRoot)
+    .on('page:load', ->
+      FB?.XFBML.parse()
+    )
+  fb_events_bound = true
+
+saveFacebookRoot = ->
+  fb_root = $('#fb-root').detach()
+
+restoreFacebookRoot = ->
+  if $('#fb-root').length > 0
+    $('#fb-root').replaceWith fb_root
+  else
+    $('body').append fb_root
+
+loadFacebookSDK = ->
+  window.fbAsyncInit = initializeFacebookSDK
+  $.getScript("//connect.facebook.net/en_US/all.js#xfbml=1")
+
+initializeFacebookSDK = ->
+  FB.init
+    appId     : '220513768086130'
+    channelUrl: '//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=220513768086130&version=v2.0'
+    status    : true
+    cookie    : true
+    xfbml     : true

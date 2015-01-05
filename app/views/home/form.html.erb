@@ -1,0 +1,500 @@
+<div class="row">
+  <%= form_tag("/home/submit_form", class: "form-horizontal") do %>
+    <div data-toggle="buttons" id="choice_type" class="center-block">
+      <label class="btn btn-vendeur control-label <%= "active" if params[:type] == "vendre" %> ">
+        <input type="radio" name="type" id="radio_vendeur" autocomplete="off" <%= "checked" if params[:type] == "vendre" %> >Vendeur</input>
+      </label>
+      <span class="badge label_where">ou</span>
+      <label class="btn btn-vendeur control-label <%= "active" if params[:type] == "acheter" %> ">
+        <input type="radio" name="type" id="radio_acheteur" autocomplete="off" <%= "checked" if params[:type] == "acheter" %> >Acheteur</input>
+      </label>
+    </div>
+
+    <div class="hide step0">
+      <div class="col-xs-12">
+        <div class="panel panel-default tuto">
+          <div class="panel-heading">Comment faire une proposition de Rachat ?</div>
+          <table class="table table-bordered">
+            <tr>
+              <td class="width-175">
+                <p>LSDC GROUP, un concept simple, sécurisé et solide pour vendre tous vos biens CASH le plus rapidement possible !</p>
+              </td>
+              <td>
+                <div class="row text-center" style="min-width: 400px; min-height: 150px;">
+                  <div class="col-xs-4">
+                    <div id="logo-lsdc" class="center-block"></div>
+                    <p>Remplissez le formulaire</p>
+                    <img class="arrow down" src="/assets/arrow.png">
+                  </div>
+                  <div class="col-xs-4">
+                    <p>Nous vous Répondons sous 24H</p>
+                    <div id="logo-lsdc" class="center-block"></div>
+                    <img class="arrow up" src="/assets/arrow.png">
+                  </div>
+                  <div class="col-xs-4">
+                    <div id="logo-lsdc" class="center-block"></div>
+                    <p>Prenons R.D.V dans l'un de nos 60 point Rachat et soyer payer CASH !</p>
+                  </div>
+                </div>
+              </td>
+              <td class="width-175">
+                <div class="text-center">Avantages</div>
+                <ul>
+                  <li>Coffee</li>
+                  <li>Milk</li>
+                  <li>Milk</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="col-xs-12">
+        <div class="panel panel-default tuto">
+          <div class="panel-heading">Comment faire une proposition de Rachat ?</div>
+          <table class="table table-bordered">
+            <tr>
+              <td class="width-175">
+                <p>LSDC GROUP, un concept simple, sécurisé et solide pour vendre tous vos biens CASH le plus rapidement possible !
+                </td>
+                <td>
+                  <div class="row text-center" style="min-width: 400px; min-height: 150px;">
+                    <div class="col-xs-4">
+                      <div id="logo-lsdc" class="center-block"></div>
+                      <p>Remplissez le formulaire</p>
+                      <img class="arrow down" src="/assets/arrow.png">
+                    </div>
+                    <div class="col-xs-4">
+                      <p>Nous vous Répondons sous 24H</p>
+                      <div id="logo-lsdc" class="center-block"></div>
+                      <img class="arrow up" src="/assets/arrow.png">
+                    </div>
+                    <div class="col-xs-4">
+                      <div id="logo-lsdc" class="center-block"></div>
+                      <p>Prenons R.D.V dans l'un de nos 60 point Rachat et soyer payer CASH !</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="width-175">
+                  <div class="text-center">Avantages</div>
+                  <ul>
+                    <li>Coffee</li>
+                    <li>Milk</li>
+                    <li>Milk</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+      <div class="col-xs-6 step0 <%= "hid" if params[:type].nil? %>">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Votre Profil</h3>
+          </div>
+          <div class="panel-body panel_info">
+            <div class="form-group">
+              <label class="control-label col-xs-4" for="select_region">Choisissez votre région</label>
+              <div class="col-xs-8">
+                <select class="form-control" id="select_region" name="annonce[region]">
+                  <option data-region=""></option>
+                  <option data-region="FR-C">Auvergne</option>
+                  <option data-region="FR-B">Aquitaine</option>
+                  <option data-region="FR-A">Alsace</option>
+                  <option data-region="FR-G">Champagne-Ardenne</option>
+                  <option data-region="FR-F">Centre</option>
+                  <option data-region="FR-E">Bretagne</option>
+                  <option data-region="FR-D">Bourgogne</option>
+                  <option data-region="FR-K">Languedoc-Roussillon</option>
+                  <option data-region="FR-J">île-de-France</option>
+                  <option data-region="FR-I">Franche-Comté</option>
+                  <option data-region="FR-H">Corse</option>
+                  <option data-region="FR-O">Nord-Pas-de-Calais</option>
+                  <option data-region="FR-N">Midi-Pyrénées</option>
+                  <option data-region="FR-M">Lorraine</option>
+                  <option data-region="FR-L">Limousin</option>
+                  <option data-region="FR-S">Picardie</option>
+                  <option data-region="FR-R">Pays de la Loire</option>
+                  <option data-region="FR-Q">Haute-Normandie</option>
+                  <option data-region="FR-P">Basse-Normandie</option>
+                  <option data-region="FR-V">Rhône-Alpes</option>
+                  <option data-region="FR-U">Provence-Alpes-Côte-d'Azur</option>
+                  <option data-region="FR-T">Poitou-Charentes</option>
+                  <option data-region="FR-DOMTOM">DOM TOM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-xs-4" for="select_departement">Choisissez votre département</label>
+              <div class="col-xs-8">
+                <select class="form-control hook" data-hook="1" id="select_departement" name="annonce[departement]"></select>
+              </div>
+            </div>
+            <div class="form-group step1 hid">
+              <label for="select_departement" class="control-label col-xs-4">Code postal</label>
+              <div class="col-xs-8">
+                <input type="number" class="form-control hook" data-hook="2" id="Code postal" placeholder="75001" name="annonce[zip_code]">
+              </div>
+            </div>
+            <div class="step2 hid radio">
+              <label class="radio-inline">
+                <input type="radio" name="annonce[statut_user]" value="particulier" id="radio-part"> particulier
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="annonce[statut_user]" value="professionel" id="radio-pro"> professionel
+              </label>
+            </div>
+
+            <div id="form-status" class="step3 hid">
+              <div class="form-group">
+                <label for="input_name" class="control-label col-xs-4">Votre nom:</label>
+                <div class="col-xs-8">
+                  <input type="text" id="input_name" class="form-control" placeholder="Dupont" name="annonce[name]">
+                </div>
+              </div>
+              <div id="form-professionnel" class="hide">
+                <div class="form-group">
+                  <label for="input_siren" class="control-label col-xs-4">Votre numéro de siren:</label>
+                  <div class="col-xs-8">
+                    <input type="text" id="input_siren" class="form-control" placeholder="n° siren" name="annonce[siren]">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="input_email" class="control-label col-xs-4">Votre email</label>
+                <div class="col-xs-8">
+                  <input type="mail" id="input_email" class="form-control" placeholder="email" name="annonce[email]">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="input_tel" class="control-label col-xs-4">Votre téléphone:</label>
+                <div class="col-xs-8">
+                  <input type="tel" class="form-control hook" data-hook="4" placeholder="tel" name="annonce[tel]">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-6 step4 hid">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Votre bien</h3>
+          </div>
+          <div class="panel-body panel_info">
+            <div class="form-group">
+              <label for="select_cat" class="control-label col-xs-4">Choisissez la catégorie</label>
+              <div class="col-xs-8">
+                <select class="form-control hook" data-hook="5" id="select_cat" name="annonce[cat]">
+                  <option data-region=""></option>
+                  <option data-cat="immo">Promotion immobilière</option>
+                  <option data-cat="hightech">Rachat High-Tech</option>
+                  <option data-cat="auto">Négociation automobile</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="select_sous_cat" class="control-label col-xs-4">Choisissez la sous-catégorie</label>
+              <div class="col-xs-8">
+                <select class="form-control hook" data-hook="6" id="select_sous_cat" name="annonce[sous_cat]"></select>
+              </div>
+            </div>
+
+            <div class="step6 hid">
+              <div id="vendeur" class="<%= "hide" if params[:type] == "acheter" %> ">
+                <div class="form-group">
+                  <label for="input_titre_annonce" class="control-label col-xs-4">Titre de votre annonce:</label>
+                  <div class="col-xs-8">
+                    <input type="text" id="input_titre_annonce" class="form-control" placeholder="Location appartement T3 70m2" name="annonce[title]">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="textarea_desc_annonce" class="control-label col-xs-4">Description de votre annonce:</label>
+                  <div class="col-xs-8">
+                    <textarea rows="4" id="textarea_desc_annonce" cols="50" class="form-control" placeholder="Appartement de type 3 pièces de 70m2 en location." name="annonce[desc]"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_price" class="control-label col-xs-4">Votre offre de vente:</label>
+                  <div class="col-xs-8">
+                    <input type="text" id="input_price" class="form-control hook" data-hook="7" placeholder="800" name="annonce[price]">
+                  </div>
+                </div>
+              </div>
+
+              <div id="acheteur" class="<%= "hide" if params[:type] != "acheter" %> ">
+                <div class="form-group">
+                  <label for="textarea_desc_acheteur" class="control-label col-xs-4">La description du bien recherché:</label>
+                  <div class="col-xs-8">
+                    <textarea rows="4" cols="50" class="form-control" placeholder="Appartement de type T3 dans Paris 5ème." name="annonce[acheteur_desc]"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_price_acheteur" class="control-label col-xs-4">Offre de rachat:</label>
+                  <div class="col-xs-8">
+                    <input type="text" class="form-control hook" data-hook="7" placeholder="800" name="annonce[acheteur_price]">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 step7 hid">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Vos photos</h3>
+          </div>
+          <div class="panel-body">
+            <div class="col-xs-4">
+              <div class="dropzone" id="dropzone1"></div>
+            </div>
+            <div class="col-xs-4">
+              <div class="dropzone" id="dropzone2"></div>
+            </div>
+            <div class="col-xs-4">
+              <div class="dropzone" id="dropzone3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step7 hid">
+        <div class="form-group">
+          <div class="col-sm-offset-10 col-xs-2">
+            <button type="submit" id="submit" disabled class="btn btn-default">Envoyer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+<div class="hide">
+  <!-- sous catégories -->
+  <select class="form-control" id="immo">
+    <option>maison</option>
+    <option>appartement</option>
+    <option>immeuble</option>
+    <option>terrain</option>
+    <option>parking</option>
+    <option>autre</option>
+  </select>
+
+  <select class="form-control" id="hightech">
+    <option>informatique</option>
+    <option>console</option>
+    <option>jeux vidéo</option>
+    <option>image et son</option>
+    <option>téléphonie</option>
+  </select>
+
+  <select class="form-control" id="auto">
+    <option>voiture</option>
+    <option>moto</option>
+    <option>caravaning</option>
+    <option>utilitaire</option>
+    <option>nautisme</option>
+    <option>équipement</option>
+  </select>
+  <!-- end sous catégories -->
+
+  <!-- Auvergne -->
+  <select class="form-control" id="FR-C">
+    <option>03	Allier</option>
+    <option>15	Cantal</option>
+    <option>43	Haute-Loire</option>
+    <option>63	Puy-de-Dôme</option>
+  </select>
+
+  <!-- Aquitaine -->
+  <select class="form-control" id="FR-B">
+    <option>24	Dordogne</option>
+    <option>33	Gironde</option>
+    <option>40	Landes</option>
+    <option>47	Lot-et-Garonne</option>
+    <option>64	Pyrénées-Atlantiques</option>
+  </select>
+
+
+  <!-- Alsace -->
+  <select class="form-control" id="FR-A">
+    <option>67	Bas-Rhin</option>
+    <option>68	Haut-Rhin</option>
+  </select>
+
+  <!-- Champagne-Ardenne -->
+  <select class="form-control" id="FR-G">
+    <option>08	Ardennes</option>
+    <option>10	Aube</option>
+    <option>51	Marne</option>
+    <option>52	Haute-Marne</option>
+  </select>
+
+  <!-- Centre -->
+  <select class="form-control" id="FR-F">
+    <option>18	Cher</option>
+    <option>28	Eure-et-Loir</option>
+    <option>36	Indre</option>
+    <option>37	Indre-et-Loire</option>
+    <option>41	Loir-et-Cher</option>
+    <option>45	Loiret</option>
+  </select>
+
+  <!-- Bretagne -->
+  <select class="form-control" id="FR-E">
+    <option>22	Côtes</option>
+    <option>29	Finistère</option>
+    <option>35	Ille-et-Vilaine</option>
+    <option>56	Morbihan</option>
+  </select>
+
+  <!-- Bourgogne -->
+  <select class="form-control" id="FR-D">
+    <option>58	Nièvre</option>
+    <option>71	Saône-et-Loire</option>
+    <option>89	Yonne</option>
+  </select>
+
+  <!-- Languedoc-Roussillon -->
+  <select class="form-control" id="FR-K">
+    <option>11	Aude</option>
+    <option>30	Gard</option>
+    <option>34	Hérault</option>
+    <option>48	Lozère</option>
+    <option>66	Pyrénées-Orientales</option>
+  </select>
+
+  <!-- Ile-de-France -->
+  <select class="form-control" id="FR-J">
+    <option>75	Paris</option>
+    <option>77	Seine-et-Marne</option>
+    <option>78	Yvelines</option>
+    <option>91	Essonne</option>
+    <option>92	Hauts-de-Seine</option>
+    <option>93	Seine-Saint-Denis</option>
+    <option>94	Val-de-Marne</option>
+  </select>
+
+  <!-- Franche-Comté -->
+  <select class="form-control" id="FR-I">
+    <option>25	Doubs</option>
+    <option>39	Jura</option>
+    <option>70	Haute-Saône</option>
+    <option>90	Territoire-de-Belfort</option>
+  </select>
+
+  <!-- Corse -->
+  <select class="form-control" id="FR-H">
+    <option>2A	Corse-du-Sud</option>
+    <option>2B	Haute-Corse</option>
+  </select>
+
+  <!-- Nord-Pas-de-Calais -->
+  <select class="form-control" id="FR-O">
+    <option>59	Nord</option>
+    <option>62	Pas-de-Calais</option>
+  </select>
+
+  <!-- Midi-Pyrénées -->
+  <select class="form-control" id="FR-N">
+    <option>09	Ariège</option>
+    <option>12	Aveyron</option>
+    <option>31	Haute-Garonne</option>
+    <option>32	Gers</option>
+    <option>46	Lot</option>
+    <option>65	Hautes-Pyrénées</option>
+    <option>81	Tarn</option>
+    <option>82	Tarn-et-Garonne</option>
+  </select>
+
+  <!-- Lorraine -->
+  <select class="form-control" id="FR-M">
+    <option>54	Meurthe-et-Moselle</option>
+    <option>55	Meuse</option>
+    <option>57	Moselle</option>
+    <option>88	Vosges</option>
+  </select>
+
+  <!-- Limousin -->
+  <select class="form-control" id="FR-L">
+    <option>19	Corrèze</option>
+    <option>23	Creuse</option>
+    <option>87	Haute-Vienne</option>
+  </select>
+
+  <!-- Picardie -->
+  <select class="form-control" id="FR-S">
+    <option>02	Aisne</option>
+    <option>60	Oise</option>
+    <option>80	Somme</option>
+  </select>
+
+  <!-- Pays de la Loire -->
+  <select class="form-control" id="FR-R">
+    <option>44	Loire-Atlantique</option>
+    <option>49	Maine-et-Loire</option>
+    <option>53	Mayenne</option>
+    <option>72	Sarthe</option>
+    <option>85	Vendée</option>
+  </select>
+
+  <!-- Haute-Normandie -->
+  <select class="form-control" id="FR-Q">
+    <option>27	Eure</option>
+    <option>76	Seine-Maritime</option>
+  </select>
+
+  <!-- Basse-Normandie -->
+  <select class="form-control" id="FR-P">
+    <option>14	Calvados</option>
+    <option>50	Manche</option>
+    <option>61	Orne</option>
+  </select>
+
+  <!-- Rhône-Alpes -->
+  <select class="form-control" id="FR-V">
+    <option>01	Ain</option>
+    <option>07	Ardèche</option>
+    <option>26	Drôme</option>
+    <option>38	Isère</option>
+    <option>42	Loire</option>
+    <option>69	Rhône</option>
+    <option>73	Savoie</option>
+    <option>74	Haute-Savoie</option>
+  </select>
+
+  <!-- Provence-Alpes-Côte d'Azur -->
+  <select class="form-control" id="FR-U">
+    <option>04	Alpes</option>
+    <option>05	Hautes-Alpes</option>
+    <option>06	Alpes-Maritimes</option>
+    <option>13	Bouches-du-Rhône</option>
+    <option>83	Var</option>
+    <option>84	Vaucluse</option>
+  </select>
+
+  <!-- Poitou-Charentes -->
+  <select class="form-control" id="FR-T">
+    <option>16	Charente</option>
+    <option>17	Charente-Maritime</option>
+    <option>79	Deux-Sèvres</option>
+    <option>86	Vienne</option>
+  </select>
+
+  <!-- DOM TOM -->
+  <select class="form-control" id="FR-DOMTOM">
+    <option>DOM TOM</option>
+  </select>
+
+</div>
