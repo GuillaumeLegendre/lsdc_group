@@ -84,20 +84,30 @@ a:active {
 
 header, footer{
   min-width: 1070px !important;
+  background-color: white;
+}
+
+body{
+  min-width: 1285px !important;
+}
+
+.container{
+  width: 1170px;
 }
 
 .container#content{
-  width: 1036px !important;
   padding-top:10px;
   min-height: 413px;
 }
 
 .first-line{
   padding-top: 5px;
-  background-color: white;
   height:100px;
   .label-logo{
     font: normal normal bold 15px "Averia Sans Libre", Helvetica, sans-serif;
+  }
+  .col-xs-2{
+    padding: 0;
   }
 }
 

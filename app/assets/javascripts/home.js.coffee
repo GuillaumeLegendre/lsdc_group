@@ -558,6 +558,27 @@ ready = ->
   if type
     $("#radio_"+ type).click()
 
+
+  readURL = (input) ->
+    if input.files and input.files[0]
+      reader = new FileReader()
+      val = $(input).attr("data-value")
+      reader.onload = (e) ->
+        $("#img_import_"+  val).attr "src", e.target.result
+        return
+
+      reader.readAsDataURL input.files[0]
+    return
+
+  $("#input_img1, #input_img2, #input_img3").change ->
+    readURL this
+    return
+
+  $("#img_import_1, #img_import_2, #img_import_3").click ->
+    val = $(this).attr("data-value")
+    $("#input_img"+val).click()
+    return
+
   return
 
 $(document).ready ready
