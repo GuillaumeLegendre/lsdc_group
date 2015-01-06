@@ -34,6 +34,10 @@ ready = ->
     regionStyle:
       initial:
         fill: "black"
+      # hover:
+      #   fill: "#fdda86"
+      #   "fill-opacity": 1,
+      #   cursor: 'pointer'
 
     markerStyle:
       initial:
@@ -117,10 +121,11 @@ ready = ->
       },
       {
         latLng: [
-          46.85
-          1.95
+          45.1583
+          1.5321
+
         ]
-        name: "Brives"
+        name: "Brive-la-Gaillarde"
       },
       {
         latLng: [
@@ -494,8 +499,18 @@ ready = ->
     $("#acheteur, #vendeur").removeClass("hide")
     if $("#radio_vendeur").is(':checked')
       $("#acheteur").addClass("hide")
+      $(".multi-design").removeClass("acheteur")
+      $(".multi-design").addClass("vendeur")
+      $("#tuto-acheteur").hide()
+      $("#tuto-vendeur").show()
+      $("#submit").text("Envoyer votre propositon de rachat")
     else
       $("#vendeur").addClass("hide")
+      $(".multi-design").removeClass("vendeur")
+      $(".multi-design").addClass("acheteur")
+      $("#tuto-vendeur").hide()
+      $("#tuto-acheteur").show()
+      $("#submit").text("Envoyer votre demande de recherche")
     return
 
   $("input.hook").each ->
@@ -528,6 +543,20 @@ ready = ->
 
   $(".dropzone").dropzone({ url: "/file-upload" });
   # $("#dropzone1, #dropzone2, #dropzone3").addClass("dropzone");
+
+  changeSlide = ->
+    $(".carousel-inner .active").removeClass "active"
+    next = $(".carousel-inner").attr "data-next"
+    $($(".carousel-inner > div")[next]).addClass "active"
+    next = (parseInt(next) + 1)%4
+    $(".carousel-inner").attr "data-next", next
+
+    return
+  window.setInterval changeSlide, 8000
+
+  type = getUrlParameter('type')
+  if type
+    $("#radio_"+ type).click()
 
   return
 
