@@ -4,7 +4,6 @@ class HomeController < ApplicationController
   end
 
   def form
-    Gallery.create
   end
 
   def submit_form

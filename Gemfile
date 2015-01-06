@@ -50,7 +50,7 @@ gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'simple_form'
 gem 'dropzonejs-rails'
-gem 'carrierwave'
+# gem 'carrierwave'
 #gem "rmagick"
 gem 'font-awesome-rails'
 

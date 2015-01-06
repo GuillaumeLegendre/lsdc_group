@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: lsdc_group_production
-  username: lsdc_group
-  password: <%= ENV['LSDC_GROUP_DATABASE_PASSWORD'] %>
