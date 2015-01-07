@@ -9,8 +9,8 @@ class HomeController < ApplicationController
   def submit_form
     a = AnnonceMailer.ask_valid_annonce(params[:annonce])
     puts "test_before_deliver"
-    binding.pry
-    # a.deliver
+    #binding.pry
+    a.deliver
     puts "RAAAA"
     redirect_to "/home/form"
   end
