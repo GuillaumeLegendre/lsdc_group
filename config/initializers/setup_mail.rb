@@ -1,5 +1,5 @@
 ActionMailer::Base.smtp_settings = {
-  :address   => "smtp.lsdcgroup.com",
-  :port      => 587,
+  :address   => "localhost",
+  :port      => 25,
   :openssl_verify_mode  => 'none'
 }
