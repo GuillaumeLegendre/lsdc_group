@@ -13,8 +13,6 @@ class AnnonceMailer < ActionMailer::Base
       type = "Demande de recherche"
     end
 
-    binding.pry
-
     if @a[:image]
       if @a[:image]["1"]
         attachments["1.png"] = @a[:image]["1"].tempfile.read
