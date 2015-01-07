@@ -65,9 +65,15 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { :host => "92.222.15.21" }
+  config.action_mailer.default_url_options = { :host => "localhost" }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = { :address => "lsdcgroup.com", :port => 25 }
+  config.action_mailer.smtp_settings = {
+    :address => "lsdcgroup.com",
+    :port => 25,
+    :domain               => "lsdcgroup.com",
+    :enable_starttls_auto => true,
+    :openssl_verify_mode  => 'none'
+  }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
