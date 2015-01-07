@@ -103,7 +103,7 @@
             <div class="form-group">
               <label class="control-label col-xs-4" for="select_region">Choisissez votre région</label>
               <div class="col-xs-8">
-                <select class="form-control" id="select_region" name="annonce[region]">
+                <select class="form-control" id="select_region" name="annonce[region]" required="required">
                   <option data-region=""></option>
                   <option data-region="FR-C">Auvergne</option>
                   <option data-region="FR-B">Aquitaine</option>
@@ -134,21 +134,21 @@
             <div class="form-group">
               <label class="control-label col-xs-4" for="select_departement">Choisissez votre département</label>
               <div class="col-xs-8">
-                <select class="form-control hook" data-hook="1" id="select_departement" name="annonce[departement]"></select>
+                <select class="form-control hook" data-hook="1" id="select_departement" name="annonce[departement]" required="required"></select>
               </div>
             </div>
             <div class="form-group step1 hid">
               <label for="select_departement" class="control-label col-xs-4">Code postal</label>
               <div class="col-xs-8">
-                <input type="number" class="form-control hook" data-hook="2" id="Code postal" placeholder="75001" name="annonce[zip_code]">
+                <input type="number" class="form-control hook" data-hook="2" id="Code postal" placeholder="75001" name="annonce[zip_code]" required="required">
               </div>
             </div>
             <div class="step2 hid radio">
               <label class="radio-inline">
-                <input type="radio" name="annonce[statut_user]" value="particulier" id="radio-part"> particulier
+                <input type="radio" name="annonce[statut_user]" value="particulier" id="radio-part" required="required"> particulier
               </label>
               <label class="radio-inline">
-                <input type="radio" name="annonce[statut_user]" value="professionel" id="radio-pro"> professionel
+                <input type="radio" name="annonce[statut_user]" value="professionel" id="radio-pro" required="required"> professionel
               </label>
             </div>
 
@@ -156,7 +156,7 @@
               <div class="form-group">
                 <label for="input_name" class="control-label col-xs-4">Votre nom:</label>
                 <div class="col-xs-8">
-                  <input type="text" id="input_name" class="form-control" placeholder="Dupont" name="annonce[name]">
+                  <input type="text" id="input_name" class="form-control" placeholder="Dupont" name="annonce[name]" required="required">
                 </div>
               </div>
               <div id="form-professionnel" class="hide">
@@ -170,13 +170,13 @@
               <div class="form-group">
                 <label for="input_email" class="control-label col-xs-4">Votre email</label>
                 <div class="col-xs-8">
-                  <input type="mail" id="input_email" class="form-control" placeholder="email" name="annonce[email]">
+                  <input type="mail" id="input_email" class="form-control" placeholder="email" name="annonce[email]" required="required">
                 </div>
               </div>
               <div class="form-group">
                 <label for="input_tel" class="control-label col-xs-4">Votre téléphone:</label>
                 <div class="col-xs-8">
-                  <input type="tel" class="form-control hook" data-hook="4" placeholder="tel" name="annonce[tel]">
+                  <input type="tel" class="form-control hook" data-hook="4" placeholder="tel" name="annonce[tel]" required="required">
                 </div>
               </div>
             </div>
@@ -193,7 +193,7 @@
             <div class="form-group">
               <label for="select_cat" class="control-label col-xs-4">Choisissez la catégorie</label>
               <div class="col-xs-8">
-                <select class="form-control hook" data-hook="5" id="select_cat" name="annonce[cat]">
+                <select class="form-control hook" data-hook="5" id="select_cat" name="annonce[cat]" required="required">
                   <option data-region=""></option>
                   <option data-cat="immo">Promotion immobilière</option>
                   <option data-cat="hightech">Rachat High-Tech</option>
@@ -205,7 +205,7 @@
             <div class="form-group">
               <label for="select_sous_cat" class="control-label col-xs-4">Choisissez la sous-catégorie</label>
               <div class="col-xs-8">
-                <select class="form-control hook" data-hook="6" id="select_sous_cat" name="annonce[sous_cat]"></select>
+                <select class="form-control hook" data-hook="6" id="select_sous_cat" name="annonce[sous_cat]" required="required"></select>
               </div>
             </div>
 
@@ -214,14 +214,14 @@
                 <div class="form-group">
                   <label for="input_titre_annonce" class="control-label col-xs-4">Titre de votre annonce:</label>
                   <div class="col-xs-8">
-                    <input type="text" id="input_titre_annonce" class="form-control" placeholder="Location appartement T3 70m2" name="annonce[title]">
+                    <input type="text" id="input_titre_annonce" class="form-control" placeholder="Location appartement T3 70m2" name="annonce[title]" required="required">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="textarea_desc_annonce" class="control-label col-xs-4">Description de votre annonce:</label>
                   <div class="col-xs-8">
-                    <textarea rows="4" id="textarea_desc_annonce" cols="50" class="form-control" placeholder="Appartement de type 3 pièces de 70m2 en location." name="annonce[desc]"></textarea>
+                    <textarea rows="4" id="textarea_desc_annonce" cols="50" class="form-control" placeholder="Appartement de type 3 pièces de 70m2 en location." name="annonce[desc]" ></textarea>
                   </div>
                 </div>
 
@@ -265,7 +265,7 @@
                 <div class="preview-img text-center">
                   <img src="/assets/icon-photo.png" id="img_import_1" data-value="1" width="128" height="128"/>
                 </div>
-                <input type="file" id="input_img1" data-value="1" name="annonce[image[1]]" />
+                <input type="file" id="input_img1" data-value="1" name="annonce[image[1]]" required="required"/>
               </div>
             </div>
             <div class="col-xs-4">
