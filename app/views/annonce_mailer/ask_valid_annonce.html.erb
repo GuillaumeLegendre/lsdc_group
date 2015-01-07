@@ -4,6 +4,51 @@
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
 </head>
 <body>
-  <p>test</p>
+<pre>
+
+<% if @a[:type] = "vendeur" %>
+Proposition de rachat
+<% else %>
+Demande de recherche
+<% end %>
+
+name:           <%= @a[:name] %>
+email:          <%= @a[:email] %>
+tel:            <%= @a[:tel] %>
+region:         <%= @a[:region] %>
+departement:    <%= @a[:departement] %>
+zipcode:        <%= @a[:zip_code] %>
+<% if @a[:statut_user] == "professionnel" %>
+professionnel
+siren:          <%= @a[:siren] %>
+<% else %>
+particulier
+<% end %>
+
+catégorie:      <%= @a[:cat] %>
+sous-catégorie: <%= @a[:sous_cat] %>
+titre:          <%= @a[:title] %>
+<% if @a[:type] == "vendeur" %>
+description:    <%= @a[:desc] %>
+price:          <%= @a[:price] %>
+<% else %>
+description:    <%= @a[:acheteur_desc] %>
+price:          <%= @a[:acheteur_price] %>
+<% end %>
+
+<% if @a[:image] %>
+  <% if @a[:image][1] %>
+    <%= @a[:image][1] %>
+  <% end %>
+
+  <% if @a[:image][2] %>
+    <%= @a[:image][2] %>
+  <% end %>
+
+  <% if @a[:image][3] %>
+    <%= @a[:image][3] %>
+  <% end %>
+<% end %>
+</pre>
 </body>
 </html>

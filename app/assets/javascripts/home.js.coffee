@@ -480,12 +480,16 @@ ready = ->
 
   fill_select_sous_cat = () ->
     cat = $("#select_cat option:selected").attr("data-cat")
-    if sous_cat
+    if cat
       sous_cat = $("#"+cat+" > option").clone()
       o = new Option("", "");
       $("#select_sous_cat").empty()
       $("#select_sous_cat").append(o);
       $("#select_sous_cat").append(sous_cat)
+    return
+
+  $("#select_cat").change ->
+    fill_select_sous_cat()
     return
 
   $("#radio-pro, #radio-part").change ->
@@ -544,16 +548,6 @@ ready = ->
   $(".dropzone").dropzone({ url: "/file-upload" });
   # $("#dropzone1, #dropzone2, #dropzone3").addClass("dropzone");
 
-  changeSlide = ->
-    $(".carousel-inner .active").removeClass "active"
-    next = $(".carousel-inner").attr "data-next"
-    $($(".carousel-inner > div")[next]).addClass "active"
-    next = (parseInt(next) + 1)%4
-    $(".carousel-inner").attr "data-next", next
-
-    return
-  window.setInterval changeSlide, 8000
-
   type = getUrlParameter('type')
   if type
     $("#radio_"+ type).click()
@@ -584,6 +578,16 @@ ready = ->
 $(document).ready ready
 $(document).on "page:load", ready
 
+
+changeSlide = ->
+  $(".carousel-inner .active").removeClass "active"
+  next = $(".carousel-inner").attr "data-next"
+  $($(".carousel-inner > div")[next]).addClass "active"
+  next = (parseInt(next) + 1)%4
+  $(".carousel-inner").attr "data-next", next
+
+  return
+window.setInterval changeSlide, 8000
 
 
 ### facebook ###
