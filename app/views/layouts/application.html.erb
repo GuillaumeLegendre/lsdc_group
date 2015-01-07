@@ -9,7 +9,6 @@
   <link async href="http://fonts.googleapis.com/css?family=Averia%20Sans%20Libre" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-  <%= bootstrap_flash %>
   <header>
     <div class="container first-line">
       <div class="row">
@@ -56,6 +55,7 @@
     </div>
   </header>
   <div class="container" id="content">
+    <%= bootstrap_flash %>
     <%= yield %>
   </div>
   <footer>

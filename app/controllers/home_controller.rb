@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   def submit_form
     a = AnnonceMailer.ask_valid_annonce(params[:annonce])
     a.deliver
-    redirect_to "/home/form"
+    redirect_to "/home/form", :notice => "Votre proposition à bien été envoyée."
   end
 
 end
