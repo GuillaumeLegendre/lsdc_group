@@ -1,5 +1,5 @@
 <div class="row">
-  <%= form_tag("/home/submit_form", class: "form-horizontal") do %>
+  <%= form_tag("/home/submit_form", multipart: true, class: "form-horizontal") do %>
     <div data-toggle="buttons" id="choice_type" class="center-block">
       <label class="btn btn-vendeur control-label <%= "active" if params[:type] == "vendre" %> ">
         <input type="radio" value="vendeur" name="annonce[type]" id="radio_vendeur" autocomplete="off" <%= "checked" if params[:type] == "vendre" %> >VENDEUR ( Vous souhaitez nous vendre un bien )</input>
