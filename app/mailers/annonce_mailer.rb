@@ -13,9 +13,17 @@ class AnnonceMailer < ActionMailer::Base
       type = "Demande de recherche"
     end
 
-    attachments["1.png"] = @a[:image]["1"].tempfile
-    attachments["2.png"] = @a[:image]["2"].tempfile
-    attachments["3.png"] = @a[:image]["3"].tempfile
+    if @a[:image]
+      if @a[:image]["1"]
+        attachments["1.png"] = @a[:image]["1"].tempfile
+      end
+      if @a[:image]["2"]
+        attachments["2.png"] = @a[:image]["2"].tempfile
+      end
+      if @a[:image]["3"]
+        attachments["3.png"] = @a[:image]["3"].tempfile
+      end
+    end
     mail(to: "legendre.gui@gmail.com", subject: "#{annonce[:name]}:#{type}")
   end
 end
