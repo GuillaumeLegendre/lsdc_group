@@ -210,13 +210,13 @@
             </div>
 
             <div class="step6 hid">
-              <div id="vendeur" class="<%= "hide" if params[:type] == "acheter" %> ">
-                <div class="form-group">
-                  <label for="input_titre_annonce" class="control-label col-xs-4">Titre de votre annonce:</label>
-                  <div class="col-xs-8">
-                    <input type="text" id="input_titre_annonce" class="form-control" placeholder="Location appartement T3 70m2" name="annonce[title]" required="required">
-                  </div>
+              <div class="form-group">
+                <label for="input_titre_annonce" class="control-label col-xs-4">Titre de votre annonce:</label>
+                <div class="col-xs-8">
+                  <input type="text" id="input_titre_annonce" class="form-control" placeholder="Location appartement T3 70m2" name="annonce[title]" required="required">
                 </div>
+              </div>
+              <div id="vendeur" class="<%= "hide" if params[:type] == "acheter" %> ">
 
                 <div class="form-group">
                   <label for="textarea_desc_annonce" class="control-label col-xs-4">Description de votre annonce:</label>
