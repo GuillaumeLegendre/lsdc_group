@@ -101,7 +101,7 @@
           </div>
           <div class="panel-body panel_info">
             <div class="form-group">
-              <label class="control-label col-xs-4" for="select_region">Choisissez votre région</label>
+              <label class="control-label col-xs-4" for="select_region">Choisissez votre région :</label>
               <div class="col-xs-8">
                 <select class="form-control" id="select_region" name="annonce[region]" required="required">
                   <option data-region=""></option>
@@ -132,51 +132,52 @@
               </div>
             </div>
             <div class="form-group">
-              <label class="control-label col-xs-4" for="select_departement">Choisissez votre département</label>
+              <label class="control-label col-xs-4" for="select_departement">Choisissez votre département :</label>
               <div class="col-xs-8">
                 <select class="form-control hook" data-hook="1" id="select_departement" name="annonce[departement]" required="required"></select>
               </div>
             </div>
             <div class="form-group step1 hid">
-              <label for="select_departement" class="control-label col-xs-4">Code postal</label>
+              <label for="select_departement" class="control-label col-xs-4">Code postal :</label>
               <div class="col-xs-8">
-                <input type="number" class="form-control hook" data-hook="2" id="Code postal" placeholder="75001" name="annonce[zip_code]" required="required">
+                <input type="number" class="form-control hook" data-hook="2" id="Code postal" placeholder="" name="annonce[zip_code]" required="required">
               </div>
             </div>
             <div class="step2 hid radio">
+              <label class="control-label col-xs-4">Vous êtes un :</label>
               <label class="radio-inline">
-                <input type="radio" name="annonce[statut_user]" value="particulier" id="radio-part" required="required"> particulier
+                <input type="radio" name="annonce[statut_user]" value="particulier" id="radio-part" required="required"> Particulier
               </label>
               <label class="radio-inline">
-                <input type="radio" name="annonce[statut_user]" value="professionel" id="radio-pro" required="required"> professionel
+                <input type="radio" name="annonce[statut_user]" value="professionel" id="radio-pro" required="required"> Professionel
               </label>
             </div>
 
             <div id="form-status" class="step3 hid">
               <div class="form-group">
-                <label for="input_name" class="control-label col-xs-4">Votre nom:</label>
+                <label for="input_name" class="control-label col-xs-4">Votre nom :</label>
                 <div class="col-xs-8">
-                  <input type="text" id="input_name" class="form-control" placeholder="Dupont" name="annonce[name]" required="required">
+                  <input type="text" id="input_name" class="form-control" placeholder="" name="annonce[name]" required="required">
                 </div>
               </div>
               <div id="form-professionnel" class="hide">
                 <div class="form-group">
-                  <label for="input_siren" class="control-label col-xs-4">Votre numéro de siren:</label>
+                  <label for="input_siren" class="control-label col-xs-4">Votre numéro de siren :</label>
                   <div class="col-xs-8">
-                    <input type="text" id="input_siren" class="form-control" placeholder="n° siren" name="annonce[siren]">
+                    <input type="text" id="input_siren" class="form-control" placeholder="" name="annonce[siren]">
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <label for="input_email" class="control-label col-xs-4">Votre email</label>
+                <label for="input_email" class="control-label col-xs-4">Votre email :</label>
                 <div class="col-xs-8">
-                  <input type="mail" id="input_email" class="form-control" placeholder="email" name="annonce[email]" required="required">
+                  <input type="mail" id="input_email" class="form-control" placeholder="" name="annonce[email]" required="required">
                 </div>
               </div>
               <div class="form-group">
-                <label for="input_tel" class="control-label col-xs-4">Votre téléphone:</label>
+                <label for="input_tel" class="control-label col-xs-4">Votre téléphone :</label>
                 <div class="col-xs-8">
-                  <input type="tel" class="form-control hook" data-hook="4" placeholder="tel" name="annonce[tel]" required="required">
+                  <input type="tel" class="form-control hook" data-hook="4" placeholder="" name="annonce[tel]" required="required">
                 </div>
               </div>
             </div>
@@ -191,7 +192,7 @@
           </div>
           <div class="panel-body panel_info">
             <div class="form-group">
-              <label for="select_cat" class="control-label col-xs-4">Choisissez la catégorie</label>
+              <label for="select_cat" class="control-label col-xs-4">Choisissez la catégorie :</label>
               <div class="col-xs-8">
                 <select class="form-control hook" data-hook="5" id="select_cat" name="annonce[cat]" required="required">
                   <option data-region=""></option>
@@ -203,7 +204,7 @@
             </div>
 
             <div class="form-group">
-              <label for="select_sous_cat" class="control-label col-xs-4">Choisissez la sous-catégorie</label>
+              <label for="select_sous_cat" class="control-label col-xs-4">Choisissez la sous-catégorie :</label>
               <div class="col-xs-8">
                 <select class="form-control hook" data-hook="6" id="select_sous_cat" name="annonce[sous_cat]" required="required"></select>
               </div>
@@ -211,40 +212,40 @@
 
             <div class="step6 hid">
               <div class="form-group">
-                <label for="input_titre_annonce" class="control-label col-xs-4">Titre de votre annonce:</label>
+                <label for="input_titre_annonce" class="control-label col-xs-4">Titre de votre annonce :</label>
                 <div class="col-xs-8">
-                  <input type="text" id="input_titre_annonce" class="form-control" placeholder="Location appartement T3 70m2" name="annonce[title]" required="required">
+                  <input type="text" id="input_titre_annonce" class="form-control" placeholder="" name="annonce[title]" required="required">
                 </div>
               </div>
               <div id="vendeur" class="<%= "hide" if params[:type] == "acheter" %> ">
 
                 <div class="form-group">
-                  <label for="textarea_desc_annonce" class="control-label col-xs-4">Description de votre annonce:</label>
+                  <label for="textarea_desc_annonce" class="control-label col-xs-4">Description de votre annonce :</label>
                   <div class="col-xs-8">
-                    <textarea rows="4" id="textarea_desc_annonce" cols="50" class="form-control" placeholder="Appartement de type 3 pièces de 70m2 en location." name="annonce[desc]" ></textarea>
+                    <textarea rows="4" id="textarea_desc_annonce" cols="50" class="form-control" placeholder="" name="annonce[desc]" ></textarea>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="input_price" class="control-label col-xs-4">Votre offre de vente:</label>
+                  <label for="input_price" class="control-label col-xs-4">Votre offre de vente :</label>
                   <div class="col-xs-8">
-                    <input type="text" id="input_price" class="form-control hook" data-hook="7" placeholder="800" name="annonce[price]">
+                    <input type="text" id="input_price" class="form-control hook" data-hook="7" placeholder="" name="annonce[price]">
                   </div>
                 </div>
               </div>
 
               <div id="acheteur" class="<%= "hide" if params[:type] != "acheter" %> ">
                 <div class="form-group">
-                  <label for="textarea_desc_acheteur" class="control-label col-xs-4">La description du bien recherché:</label>
+                  <label for="textarea_desc_acheteur" class="control-label col-xs-4">La description du bien recherché :</label>
                   <div class="col-xs-8">
-                    <textarea rows="4" cols="50" class="form-control" placeholder="Appartement de type T3 dans Paris 5ème." name="annonce[acheteur_desc]"></textarea>
+                    <textarea rows="4" cols="50" class="form-control" placeholder="" name="annonce[acheteur_desc]"></textarea>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="input_price_acheteur" class="control-label col-xs-4">Offre de rachat:</label>
+                  <label for="input_price_acheteur" class="control-label col-xs-4">Offre de rachat :</label>
                   <div class="col-xs-8">
-                    <input type="text" class="form-control hook" data-hook="7" placeholder="800" name="annonce[acheteur_price]">
+                    <input type="text" class="form-control hook" data-hook="7" placeholder="" name="annonce[acheteur_price]">
                   </div>
                 </div>
               </div>
