@@ -36,6 +36,12 @@ description:    <%= @a[:acheteur_desc] %>
 price:          <%= @a[:acheteur_price] %>
 <% end %>
 
+<% if @a[:info_supp] == "vendeur" %>
+  <% @a[:info_supp].each do |key, val| %>
+<%= key +" : "+val %>
+  <% end %>
+<% end %>
+
 </pre>
 </body>
 </html>

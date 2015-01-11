@@ -7,10 +7,8 @@ class HomeController < ApplicationController
   end
 
   def submit_form
-    puts params[:annonce].inspect
-    binding.pry
     a = AnnonceMailer.ask_valid_annonce(params[:annonce])
-    #a.deliver
+    a.deliver
     if params[:annonce][:type] == "vendre"
       redirect_to "/home/form", :notice => "
         <b style='font-size:17px;'>Nous avons bien reçu votre proposition de rachat. Nous vous remercions pour votre confiance.</b>
