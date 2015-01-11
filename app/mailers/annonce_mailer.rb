@@ -24,6 +24,6 @@ class AnnonceMailer < ActionMailer::Base
         attachments["3.png"] = @a[:image]["3"].tempfile.read
       end
     end
-    mail(to: "stanleydubois@lsdcgroup.com", subject: "#{annonce[:name]}:#{type}")
+    mail(to: "lsdcgroup.contact@gmail.com", subject: "#{annonce[:name]}:#{type}")
   end
 end
