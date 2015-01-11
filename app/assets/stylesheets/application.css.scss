@@ -83,16 +83,16 @@ a:active {
 }
 
 header, footer{
-  min-width: 1070px !important;
+  min-width: 1024px !important;
   background-color: white;
 }
 
 body{
-  min-width: 1285px !important;
+  min-width: 1024px !important;
 }
 
 .container{
-  width: 1170px;
+  width: 1024px;
 }
 
 .container#content{
@@ -223,9 +223,12 @@ footer{
 .footer-2{
   background-color: #efefee;
   padding: 20px 0;
+  h3{
+    font-size: 21px;
+  }
   div{
     text-align: center;
-    font-size: 13px;
+    font-size: 11px;
     a{
       color: black;
       cursor: pointer;
@@ -248,7 +251,7 @@ footer{
   color: white;
   padding: 20px 0;
   .slogan1{
-    font-size: 24px;
+    font-size: 21px;
     margin-top: 5px;
   }
 }
@@ -482,4 +485,10 @@ footer{
   background-color: #FDDA86 !important;
   border-color: #000000 !important;
   color: #000000 !important;
+}
+
+.alert-danger {
+  background-color: #000000 !important;
+  border-color: #FDDA86 !important;
+  color: #FDDA86 !important;
 }

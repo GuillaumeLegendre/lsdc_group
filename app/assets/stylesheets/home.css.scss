@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#content{width:1170px;}
 .jvectormap-zoomin{display:none;}
 .jvectormap-zoomout{display:none;}
 
@@ -22,7 +21,8 @@
 }
 
 #choice_type{
-  margin: 0 0 20px 135px;
+  margin-bottom: 20px;
+  width: 955px;
   label{
     margin-top: -15px;
   }
@@ -58,8 +58,7 @@
 }
 
 .radio{
-  left: 164px;
-  top: -15px;
+
 }
 
 .tuto{
@@ -75,7 +74,7 @@
   .arrow{
     position: absolute;
     top: 72px;
-    left: 233px;
+    left: 187px;
   }
   .arrow.up{
     -webkit-transform: rotateZ(-19deg);
@@ -129,6 +128,14 @@
 
 .partenaire{
   border: 1px solid black;
+  border-radius: 4px;
+  background-color: white;
+  a{
+    color:#fdda86 !important;
+  }
+  a:hover{
+    color:white !important;
+  }
   h2{
     margin-top:0;
   }
@@ -151,7 +158,7 @@
     display: inline-block;
   }
   .label-icon-process{
-    width: 170px;
+    width: 168px;
   }
   .icon-process{
     border-radius: 50%;
@@ -187,7 +194,7 @@
     display: inline-block;
   }
   .label-icon-process{
-    width: 170px;
+    width: 168px;
   }
   .icon-process{
     border-radius: 50%;
@@ -220,11 +227,9 @@
 }
 
 .multi-design.vendeur{
-  button{
-    background-color: black;
-    color: #fdda86;
-    border-color: #fdda86;
-    opacity: 1;
+  button, button:hover, button:active{
+    margin: auto;
+    display: block;
   }
   .panel-heading{
     background-color: black;
@@ -239,11 +244,9 @@
 }
 
 .multi-design.acheteur{
-  button{
-    background-color: #fdda86;
-    color: black;
-    border-color: black;
-    opacity: 1;
+  button, button:hover, button:active{
+    margin: auto;
+    display: block;
   }
   .panel-heading{
     background-color: #fdda86;
@@ -258,10 +261,9 @@
 }
 .block-img{
   color: black;
-  background-color: rgb(239, 239, 238);;
+  background-color: white;
   border: 1px solid black;
   .preview-img{
-    background-color: #efefee;
     width: 130px;
     margin: auto;
     cursor: pointer;
@@ -275,4 +277,18 @@
     width: 275px;
     cursor: pointer;
   }
+}
+
+path[data-code="FR-A"]:hover,
+path[data-code="FR-V"]:hover,
+path[data-code="FR-J"]:hover,
+path[data-code="FR-B"]:hover,
+path[data-code="FR-R"]:hover,
+path[data-code="FR-O"]:hover
+{
+  fill: black;
+}
+
+.input-warning{
+  border: 3px solid red !important;
 }

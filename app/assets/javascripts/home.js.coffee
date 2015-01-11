@@ -34,10 +34,10 @@ ready = ->
     regionStyle:
       initial:
         fill: "black"
-      # hover:
-      #   fill: "#fdda86"
-      #   "fill-opacity": 1,
-      #   cursor: 'pointer'
+      hover:
+        fill: "#fdda86"
+        "fill-opacity": 1,
+        cursor: 'pointer'
 
     markerStyle:
       initial:
@@ -429,41 +429,6 @@ ready = ->
       }]
     }
 
-
-  # filter = "
-  #   <filter
-  #     id = 'dropShadow'
-  #     x='0'
-  #     y='0'
-  #     width='200%'
-  #     height='200%'>
-  #     <feOffset
-  #       in = 'SourceAlpha'
-  #       result = 'offOut'
-  #       dx = '5'
-  #       dy = '5'/>
-  #     <feGaussianBlur
-  #       in = 'offOut'
-  #       result = 'blurOut'
-  #       stdDeviation = '3'/>
-  #     <feBlend
-  #       in='SourceGraphic'
-  #       in2='blurOut'
-  #       mode='normal'/>
-  #   </filter>"
-
-  # # Create dummy svg with filter definition
-  # $("body").append "<svg id=\"dummy\" style=\"display:none\"><defs>" + filter + "</defs></svg>"
-  #
-  # # Append filter definition to vectormap created svg
-  # $("#world-map svg").append $("#dummy defs")
-  #
-  # # Remove dummy
-  # $("#dummy").remove()
-  #
-  # # Connect filter to the group of map objects
-  # $("#world-map svg g").attr "filter", "url(#dropShadow)"
-
   fill_select_departement = () ->
     region = $("#select_region option:selected").attr("data-region")
     if region
@@ -479,6 +444,7 @@ ready = ->
     return
 
   fill_select_sous_cat = () ->
+    $("#panel-infos-supp").addClass("hide")
     cat = $("#select_cat option:selected").attr("data-cat")
     if cat
       sous_cat = $("#"+cat+" > option").clone()
@@ -490,6 +456,15 @@ ready = ->
 
   $("#select_cat").change ->
     fill_select_sous_cat()
+    return
+
+  $("#select_sous_cat").change ->
+    infosupp = $("#select_sous_cat option:selected").attr("data-infosupp")
+    if infosupp
+      $("#panel-infos-supp").removeClass("hide")
+    else
+      $("#panel-infos-supp").addClass("hide")
+    $("#info-supp-content").html $("#"+infosupp).clone()
     return
 
   $("#radio-pro, #radio-part").change ->
@@ -507,14 +482,18 @@ ready = ->
       $(".multi-design").addClass("vendeur")
       $("#tuto-acheteur").hide()
       $("#tuto-vendeur").show()
-      $("#submit").text("Envoyer votre propositon de rachat")
+      $("#submit").text("ENVOYER VOTRE PROPOSITON DE RACHAT")
+      $("#submit").addClass("btn-vendeur")
+      $("#submit").removeClass("btn-acheteur")
     else
       $("#vendeur").addClass("hide")
       $(".multi-design").removeClass("vendeur")
       $(".multi-design").addClass("acheteur")
       $("#tuto-vendeur").hide()
       $("#tuto-acheteur").show()
-      $("#submit").text("Envoyer votre demande de recherche")
+      $("#submit").text("ENVOYER VOTRE DEMANDE DE RECHERCHE")
+      $("#submit").addClass("btn-acheteur")
+      $("#submit").removeClass("btn-vendeur")
     return
 
   $("input.hook").each ->
@@ -568,10 +547,19 @@ ready = ->
     readURL this
     return
 
-  $("#img_import_1, #img_import_2, #img_import_3").click ->
+  $("#img_import_1, #img_import_2, #img_import_3, #label_import_1, #label_import_2, #label_import_3").click ->
     val = $(this).attr("data-value")
     $("#input_img"+val).click()
     return
+
+  $("#submit").click ->
+    $(".input-warning").removeClass "input-warning"
+    $("input, select, textarea").each (index) ->
+      if !$(this).val()
+        $(this).addClass "input-warning"
+      return
+    return
+
 
   return
 
