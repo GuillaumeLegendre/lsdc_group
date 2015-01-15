@@ -460,7 +460,7 @@ ready = ->
 
   $("#select_sous_cat").change ->
     infosupp = $("#select_sous_cat option:selected").attr("data-infosupp")
-    if infosupp
+    if infosupp && $('#radio_vendeur').is(':checked')
       $("#panel-infos-supp").removeClass("hide")
     else
       $("#panel-infos-supp").addClass("hide")
