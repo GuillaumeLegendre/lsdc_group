@@ -1,13 +1,19 @@
 <div class="row">
   <%= form_tag("/home/submit_form", multipart: true, class: "form-horizontal") do %>
-    <div data-toggle="buttons" id="choice_type" class="center-block">
-      <label class="btn btn-vendeur text-center <%= "active" if params[:type] == "vendre" %> " style="width:399px;">
-        <input type="radio" value="vendeur" name="annonce[type]" id="radio_vendeur" autocomplete="off" <%= "checked" if params[:type] == "vendre" %> >VENDEUR ( Vous souhaitez nous vendre un bien )</input>
-      </label>
-      <span class="badge label_where">OU</span>
-      <label class="btn btn-acheteur text-center <%= "active" if params[:type] == "acheter" %> " style="padding-right: 6px; padding-left: 6px;">
-        <input type="radio" value="acheteur" name="annonce[type]" id="radio_acheteur" autocomplete="off" <%= "checked" if params[:type] == "acheter" %> >ACHETEUR ( Vous souhaitez que l’on recherche un bien )</input>
-      </label>
+    <div data-toggle="buttons" id="choice_type" class="row">
+      <div class="col-xs-5" style="width: 45.666667%;">
+        <label class="btn btn-vendeur text-center <%= "active" if params[:type] == "vendre" %> " style="float:right;">
+          <input type="radio" style="position: absolute;clip: rect(0, 0, 0, 0);pointer-events: none;" value="vendeur" name="annonce[type]" id="radio_vendeur" autocomplete="off" <%= "checked" if params[:type] == "vendre" %> >VENDEUR ( Vous souhaitez nous vendre un bien )</input>
+        </label>
+      </div>
+      <div class="col-xs-2 text-center" style="width: 8.666667%;">
+        <span class="badge">OU</span>
+      </div>
+      <div class="col-xs-5" style="width: 45.666667%;">
+        <label class="btn btn-acheteur text-center <%= "active" if params[:type] == "acheter" %> " style="padding-right: 6px; padding-left: 6px;">
+          <input type="radio" style="position: absolute;clip: rect(0, 0, 0, 0);pointer-events: none;" value="acheteur" name="annonce[type]" id="radio_acheteur" autocomplete="off" <%= "checked" if params[:type] == "acheter" %> >ACHETEUR ( Vous souhaitez que l’on recherche un bien )</input>
+        </label>
+      </div>
     </div>
 
     <div class="hide step0">
@@ -286,7 +292,7 @@
                 <div class="preview-img text-center">
                   <img src="/assets/icon-photo.png" id="img_import_1" data-value="1" width="128" height="128"/>
                 </div>
-                <input style="" type="file" id="input_img1" data-value="1" name="annonce[image[1]]" required="required"/>
+                <input type="file" id="input_img1" data-value="1" name="annonce[image[1]]" required="required"/>
                 <div id="label_import_1" data-value="1" class="preview-img text-center" style="width:263px;">Cliquer sur l’image pour ajouter ou</br>modifier une photo</div>
               </div>
             </div>
@@ -296,7 +302,7 @@
                 <div class="preview-img text-center">
                   <img src="/assets/icon-photo.png" id="img_import_2" data-value="2" width="128" height="128"/>
                 </div>
-                <input style="" type="file" id="input_img2" data-value="2" name="annonce[image[2]]" />
+                <input type="file" id="input_img2" data-value="2" name="annonce[image[2]]" class="no-warning"/>
                 <div id="label_import_2" data-value="2" class="preview-img text-center" style="width:263px;">Cliquer sur l’image pour ajouter ou</br>modifier une photo</div>
               </div>
             </div>
@@ -306,7 +312,7 @@
                 <div class="preview-img text-center">
                   <img src="/assets/icon-photo.png" id="img_import_3" data-value="3" width="128" height="128"/>
                 </div>
-                <input style="" type="file" id="input_img3" data-value="3" name="annonce[image[3]]" />
+                <input type="file" id="input_img3" data-value="3" name="annonce[image[3]]" class="no-warning"/>
                 <div id="label_import_3" data-value="3" class="preview-img text-center" style="width:263px;">Cliquer sur l’image pour ajouter ou</br>modifier une photo</div>
               </div>
             </div>

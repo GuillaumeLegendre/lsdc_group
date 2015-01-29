@@ -16,18 +16,9 @@
   }
 }
 
-.label_where{
-  margin: 0 10px;
-}
-
 #choice_type{
   margin-bottom: 20px;
-  width: 955px;
-  label{
-    margin-top: -15px;
-  }
   .badge{
-    margin: 0 20px;
     font-size:28px;
     color: black;
     background-color: #fdda86;
@@ -55,10 +46,6 @@
 .dropzone .dz-default.dz-message {
   background-image: url(/assets/icon-photo.png) !important;
   background-position: 151px 0px !important;
-}
-
-.radio{
-
 }
 
 .tuto{
@@ -289,6 +276,15 @@ path[data-code="FR-O"]:hover
   fill: black;
 }
 
+path{
+  stroke: #fdda86;
+  stroke-width: 1px;
+}
+
 .input-warning{
-  border: 3px solid red !important;
+  border: 3px solid red;
+}
+
+.no-warning{
+  border: 0;
 }

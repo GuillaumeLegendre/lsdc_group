@@ -33,7 +33,7 @@ ready = ->
     zoomMax: 1
     regionStyle:
       initial:
-        fill: "black"
+        fill: "black",
       hover:
         fill: "#fdda86"
         "fill-opacity": 1,
@@ -429,6 +429,41 @@ ready = ->
       }]
     }
 
+  filter = "
+    <filter
+      id = 'dropShadow'
+      x='0'
+      y='0'
+      width='200%'
+      height='200%'>
+      <feOffset
+        in = 'SourceAlpha'
+        result = 'offOut'
+        dx = '3'
+        dy = '3'/>
+      <feGaussianBlur
+        in = 'offOut'
+        result = 'blurOut'
+        stdDeviation = '3'/>
+      <feBlend
+        in='SourceGraphic'
+        in2='blurOut'
+        mode='normal'/>
+    </filter>"
+
+  # Create dummy svg with filter definition
+  $("body").append "<svg id=\"dummy\" style=\"display:none\"><defs>" + filter + "</defs></svg>"
+
+  # Append filter definition to vectormap created svg
+  $("#world-map svg").append $("#dummy defs")
+
+  # Remove dummy
+  $("#dummy").remove()
+
+  # Connect filter to the group of map objects
+  $("#world-map svg g").attr "filter", "url(#dropShadow)"
+
+
   fill_select_departement = () ->
     region = $("#select_region option:selected").attr("data-region")
     if region
@@ -485,6 +520,7 @@ ready = ->
       $("#submit").text("ENVOYER VOTRE PROPOSITON DE RACHAT")
       $("#submit").addClass("btn-vendeur")
       $("#submit").removeClass("btn-acheteur")
+      $("#input_img1").attr("required", "required")
     else
       $("#vendeur").addClass("hide")
       $(".multi-design").removeClass("vendeur")
@@ -494,6 +530,7 @@ ready = ->
       $("#submit").text("ENVOYER VOTRE DEMANDE DE RECHERCHE")
       $("#submit").addClass("btn-acheteur")
       $("#submit").removeClass("btn-vendeur")
+      $("#input_img1").attr("required", false)
     return
 
   $("input.hook").each ->
