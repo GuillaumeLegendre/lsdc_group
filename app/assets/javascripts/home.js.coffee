@@ -493,14 +493,19 @@ ready = ->
     fill_select_sous_cat()
     return
 
-  $("#select_sous_cat").change ->
+  print_infos_supp = () ->
     infosupp = $("#select_sous_cat option:selected").attr("data-infosupp")
     if infosupp && $('#radio_vendeur').is(':checked')
       $("#panel-infos-supp").removeClass("hide")
+      $("#info-supp-content").html $("#"+infosupp).clone()
     else
       $("#panel-infos-supp").addClass("hide")
-    $("#info-supp-content").html $("#"+infosupp).clone()
+      $("#info-supp-content").empty()
     return
+
+
+  $("#select_sous_cat").change ->
+    print_infos_supp()
 
   $("#radio-pro, #radio-part").change ->
     $("#form-professionnel, #form-status").removeClass("hide")
@@ -521,6 +526,8 @@ ready = ->
       $("#submit").addClass("btn-vendeur")
       $("#submit").removeClass("btn-acheteur")
       $("#input_img1").attr("required", "required")
+      $("#input_img1").removeClass("no-warning")
+      print_infos_supp()
     else
       $("#vendeur").addClass("hide")
       $(".multi-design").removeClass("vendeur")
@@ -531,6 +538,8 @@ ready = ->
       $("#submit").addClass("btn-acheteur")
       $("#submit").removeClass("btn-vendeur")
       $("#input_img1").attr("required", false)
+      $("#input_img1").addClass("no-warning")
+      print_infos_supp()
     return
 
   $("input.hook").each ->

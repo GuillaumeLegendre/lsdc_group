@@ -282,9 +282,9 @@ path{
 }
 
 .input-warning{
-  border: 3px solid red;
+  border: 3px solid red !important;
 }
 
 .no-warning{
-  border: 0;
+  border: 0 !important;
 }
