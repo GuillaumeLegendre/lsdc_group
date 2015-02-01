@@ -4,9 +4,8 @@ class AnnonceMailer < ActionMailer::Base
   def ask_valid_annonce(annonce)
 
     @a = annonce
-
     type = ""
-    if @a[:type] = "vendeur"
+    if @a[:type] == "vendeur"
       type = "Proposition de rachat"
     else
       type = "Demande de recherche"
