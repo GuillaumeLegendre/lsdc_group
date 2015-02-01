@@ -2,7 +2,6 @@ class AnnonceMailer < ActionMailer::Base
   default from: "no-reply@lsdc.com"
 
   def ask_valid_annonce(annonce)
-    puts annonce.inspect
 
     @a = annonce
 
@@ -24,6 +23,6 @@ class AnnonceMailer < ActionMailer::Base
         attachments["3.png"] = @a[:image]["3"].tempfile.read
       end
     end
-    mail(to: "lsdcgroup.contact@gmail.com", subject: "#{annonce[:name]}:#{type}")
+    mail(to: "stanleydubois@lsdcgroup.com", subject: "#{annonce[:name]}:#{type}", from: @a[:email])
   end
 end
